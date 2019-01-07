@@ -68,7 +68,8 @@ extension ViewController : UITextFieldDelegate{
     //returns text field
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true
+        self.view.endEditing(true)
+        return false
         
     }
     
