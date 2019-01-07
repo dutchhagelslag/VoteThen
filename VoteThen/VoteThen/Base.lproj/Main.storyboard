@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VoteThen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iS8-ea-i1z">
+                                <rect key="frame" x="190" y="568" width="135" height="49"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="BeginVote">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="elZ-th-wEA" kind="show" id="tVa-J7-atw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYW-hp-cDK">
+                                <rect key="frame" x="50" y="383" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly3-s4-Hgn">
+                                <rect key="frame" x="143" y="423" width="89" height="33"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Insert">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Insert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tcl-Rw-ghh"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQn-OM-age">
+                                <rect key="frame" x="68" y="60" width="239" height="313"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifR-pM-Sqt">
+                                <rect key="frame" x="25" y="540" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="24714"/>
+                                <connections>
+                                    <action selector="refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mWS-8t-9Pm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aYW-hp-cDK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="3fK-Ap-v2w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iS8-ea-i1z" secondAttribute="bottom" constant="50" id="6BD-yN-LuQ"/>
+                            <constraint firstItem="ly3-s4-Hgn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="KP9-I5-Yk0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aYW-hp-cDK" secondAttribute="trailing" constant="50" id="PKh-TZ-zQ4"/>
+                            <constraint firstItem="ly3-s4-Hgn" firstAttribute="top" secondItem="aYW-hp-cDK" secondAttribute="bottom" constant="10" id="Yaf-Fv-pP2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ly3-s4-Hgn" secondAttribute="trailing" constant="143" id="Ys6-6V-l1S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PQn-OM-age" secondAttribute="trailing" constant="68" id="abj-cN-BnA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iS8-ea-i1z" secondAttribute="trailing" constant="50" id="eWr-av-QDc"/>
+                            <constraint firstItem="PQn-OM-age" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="fH5-UK-dHy"/>
+                            <constraint firstItem="aYW-hp-cDK" firstAttribute="top" secondItem="PQn-OM-age" secondAttribute="bottom" constant="10" id="kLL-vw-XC4"/>
+                            <constraint firstItem="PQn-OM-age" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="sz1-ST-4eH"/>
+                            <constraint firstItem="iS8-ea-i1z" firstAttribute="top" secondItem="ly3-s4-Hgn" secondAttribute="bottom" constant="112" id="t5b-Cd-qoi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="List" destination="PQn-OM-age" id="ecb-XU-kKU"/>
+                        <outlet property="ListItem" destination="aYW-hp-cDK" id="HNi-Vl-o0d"/>
+                        <outlet property="beginvote" destination="iS8-ea-i1z" id="hFS-1l-yG5"/>
+                        <outlet property="refresh" destination="ifR-pM-Sqt" id="nYj-YH-3d5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599.20000000000005" y="-574.36281859070471"/>
+        </scene>
+        <!--Voting Page View Controller-->
+        <scene sceneID="qYC-ff-Apo">
+            <objects>
+                <viewController id="elZ-th-wEA" customClass="VotingPageViewController" customModule="VoteThen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="APe-xX-xFy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpV-kk-dKY">
+                                <rect key="frame" x="170" y="568" width="155" height="49"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                </accessibility>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="SubmitVote">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="SubmitVOte:" destination="elZ-th-wEA" eventType="touchUpInside" id="JVa-pI-Y3R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZL-u7-QCI">
+                                <rect key="frame" x="90" y="185" width="201" height="54"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="ApprovalVote">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="approval:" destination="elZ-th-wEA" eventType="touchUpInside" id="nnp-zg-ST2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2e-Ej-DzP">
+                                <rect key="frame" x="100" y="350" width="181" height="54"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="RankedVote">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="Ranked:" destination="elZ-th-wEA" eventType="touchUpInside" id="ZTL-sc-J4D"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDF-Mw-Qm7">
+                                <rect key="frame" x="67" y="264" width="240" height="361"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFq-Lm-bRL">
+                                <rect key="frame" x="162" y="72" width="50" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQT-0K-lfA">
+                                <rect key="frame" x="170" y="568" width="127" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="CountVotes">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Cound:" destination="elZ-th-wEA" eventType="touchUpInside" id="Qyo-bm-M3c"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" tag="69" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOg-3g-Cmu">
+                                <rect key="frame" x="160.5" y="323" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEc-NA-puM">
+                                <rect key="frame" x="25" y="540" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <inset key="imageEdgeInsets" minX="4" minY="0.0" maxX="-2" maxY="0.0"/>
+                                <state key="normal" title="o" image="24714"/>
+                                <connections>
+                                    <action selector="refresh:" destination="elZ-th-wEA" eventType="touchUpInside" id="nS4-97-1Xe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys6-uq-MwM">
+                                <rect key="frame" x="153.5" y="360" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="newVote?">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="restart:" destination="elZ-th-wEA" eventType="touchUpInside" id="s1M-N1-INd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lZL-u7-QCI" firstAttribute="top" secondItem="Wze-59-pR4" secondAttribute="top" constant="165" id="1iG-Lf-2UF"/>
+                            <constraint firstItem="MOg-3g-Cmu" firstAttribute="centerY" secondItem="APe-xX-xFy" secondAttribute="centerY" id="29O-ny-k21"/>
+                            <constraint firstItem="aDF-Mw-Qm7" firstAttribute="leading" secondItem="Wze-59-pR4" secondAttribute="leading" constant="67" id="8QE-OD-BMl"/>
+                            <constraint firstItem="ZFq-Lm-bRL" firstAttribute="top" secondItem="Wze-59-pR4" secondAttribute="top" constant="52" id="A1z-2B-6OB"/>
+                            <constraint firstItem="UpV-kk-dKY" firstAttribute="leading" secondItem="Wze-59-pR4" secondAttribute="leading" constant="170" id="EKh-7K-Nbu"/>
+                            <constraint firstItem="lZL-u7-QCI" firstAttribute="top" secondItem="ZFq-Lm-bRL" secondAttribute="bottom" constant="65" id="ENv-os-BQF"/>
+                            <constraint firstItem="Wze-59-pR4" firstAttribute="trailing" secondItem="ZFq-Lm-bRL" secondAttribute="trailing" constant="163" id="FfJ-Bb-WhL"/>
+                            <constraint firstItem="Wze-59-pR4" firstAttribute="trailing" secondItem="UpV-kk-dKY" secondAttribute="trailing" constant="50" id="GI4-Lw-ha0"/>
+                            <constraint firstItem="ZFq-Lm-bRL" firstAttribute="leading" secondItem="Wze-59-pR4" secondAttribute="leading" constant="162" id="Nki-dE-BPi"/>
+                            <constraint firstItem="Wze-59-pR4" firstAttribute="trailing" secondItem="k2e-Ej-DzP" secondAttribute="trailing" constant="94" id="RgQ-xY-Pcc"/>
+                            <constraint firstItem="Wze-59-pR4" firstAttribute="bottom" secondItem="aDF-Mw-Qm7" secondAttribute="bottom" constant="42" id="WG1-SH-ArI"/>
+                            <constraint firstItem="MOg-3g-Cmu" firstAttribute="centerX" secondItem="APe-xX-xFy" secondAttribute="centerX" id="Xuw-Yk-S4O"/>
+                            <constraint firstItem="Wze-59-pR4" firstAttribute="bottom" secondItem="aDF-Mw-Qm7" secondAttribute="bottom" constant="42" id="ZJG-Eu-BsF"/>
+                            <constraint firstItem="Wze-59-pR4" firstAttribute="trailing" secondItem="aDF-Mw-Qm7" secondAttribute="trailing" constant="68" id="alM-sn-7VH"/>
+                            <constraint firstItem="k2e-Ej-DzP" firstAttribute="top" secondItem="lZL-u7-QCI" secondAttribute="bottom" constant="111" id="g50-II-YoG"/>
+                            <constraint firstItem="Wze-59-pR4" firstAttribute="bottom" secondItem="UpV-kk-dKY" secondAttribute="bottom" constant="50" id="jGb-Ud-HGp"/>
+                            <constraint firstItem="lZL-u7-QCI" firstAttribute="leading" secondItem="Wze-59-pR4" secondAttribute="leading" constant="90" id="kL7-HG-JCe"/>
+                            <constraint firstItem="Wze-59-pR4" firstAttribute="trailing" secondItem="lZL-u7-QCI" secondAttribute="trailing" constant="84" id="qHe-Gb-Ii6"/>
+                            <constraint firstItem="k2e-Ej-DzP" firstAttribute="leading" secondItem="Wze-59-pR4" secondAttribute="leading" constant="100" id="sWo-QO-Vto"/>
+                            <constraint firstItem="aDF-Mw-Qm7" firstAttribute="top" secondItem="lZL-u7-QCI" secondAttribute="bottom" constant="25" id="tOs-gV-nGt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wze-59-pR4"/>
+                    </view>
+                    <connections>
+                        <outlet property="Counter" destination="ZFq-Lm-bRL" id="yIA-c0-Hfs"/>
+                        <outlet property="SubmitButton" destination="UpV-kk-dKY" id="5bc-wj-fHS"/>
+                        <outlet property="Winner" destination="MOg-3g-Cmu" id="fEo-qv-1r2"/>
+                        <outlet property="approval" destination="lZL-u7-QCI" id="M5a-4W-Ibf"/>
+                        <outlet property="count" destination="yQT-0K-lfA" id="mPX-Ua-Z6i"/>
+                        <outlet property="introbody" destination="aDF-Mw-Qm7" id="WWR-v5-Ly7"/>
+                        <outlet property="ranked" destination="k2e-Ej-DzP" id="TvV-kA-aqZ"/>
+                        <outlet property="refresh" destination="eEc-NA-puM" id="MC9-p6-qaZ"/>
+                        <outlet property="restart" destination="Ys6-uq-MwM" id="pDH-0R-uN6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bW-Eb-Pbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="-574.36281859070471"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="24714" width="256" height="256"/>
+    </resources>
+</document>
