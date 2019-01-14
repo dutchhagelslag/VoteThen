@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         List.text = ""
         ListItem.delegate = self
-        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         // Do any additional setup after loading the view, typically from a nib.
     }
     //refresh on homescreen
